@@ -29,6 +29,13 @@ This application is built on following and you must have these installed before 
 * Rails (6.1.4)
 * PostgreSQL (tested on 9.x)
 * Yarn
+* Pyroscope
+
+### Pyroscope Continuous Profiling
+[Pyroscope](https://github.com/pyroscope-io/pyroscope) is an open source continuous profiling library. We added Pyroscope's ruby gem to this example to monitor performance of this application. To install Pyroscope on a mac run `brew install pyroscope-io/brew/pyroscope` or view the documentation for installing it elsewhere.  Then start the server with `pyroscope server`.
+
+![image](https://user-images.githubusercontent.com/23323466/139774666-1b5b6006-02fd-4dc4-99cb-ede89f6390dc.png)
+
 
 ### Setup
 After *forking* this repo and cloning your own copy onto your local machine, execute the following commands in your CLI:
