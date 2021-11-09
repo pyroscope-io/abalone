@@ -19,6 +19,7 @@ services:
     environment:
       ABALONE_DATABASE_HOSTNAME: db
       DATABASE_URL: postgres://dockerpg:supersecret@db
+      IS_DOCKER: "true"
     volumes:
       - .:/myapp
       - apptmp:/myapp/tmp
@@ -57,6 +58,14 @@ services:
   brakeman:
     <<: *app
     command: bundle exec brakeman -Aw1 --no-pager
+  pyroscope:
+    image: pyroscope/pyroscope
+    environment:
+      - PYROSCOPE_LOG_LEVEL=debug
+    ports:
+      - '4040:4040'
+    command:
+      - 'server'
 
 volumes:
   dbdata:
