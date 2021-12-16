@@ -58,7 +58,7 @@ services:
   brakeman:
     <<: *app
     command: bundle exec brakeman -Aw1 --no-pager
-  pyroscope:
+  pyroscope-server:
     image: pyroscope/pyroscope
     environment:
       - PYROSCOPE_LOG_LEVEL=debug
